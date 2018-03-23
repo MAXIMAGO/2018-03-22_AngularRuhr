@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>{{title}} with a Circuit Breaker</h1>
+</div>
+<div>
+    <h2>Circuit Breaker State</h2>
+    Failure Count: {{cb.failureCount}}
+    <br/> State: {{stateText}}
+    <br/> Service Level: {{cb.serviceLevel}}
+</div>
+<div>
+    <h2>Data</h2>
+    <button (click)="reload()">Reload</button>
+    <ul>
+        <li *ngFor="let film of films | async">
+            {{film.title}}
+        </li>
+    </ul>
+</div>
